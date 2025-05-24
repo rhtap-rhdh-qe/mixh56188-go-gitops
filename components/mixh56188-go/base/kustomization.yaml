@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: mixh56188-go
+  janus-idp.io/tekton: mixh56188-go
+  backstage.io/kubernetes-id: mixh56188-go
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: mixh56188-go
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
